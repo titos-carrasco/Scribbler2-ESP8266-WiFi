@@ -7,10 +7,14 @@ Trying to add Wifi and GPIO to the Scribbler2 robot using and ESP8266 (NodeMCU)
 * Simple code using **SoftwareSerial**
 * SoftwareSerial need to be modified. It doesn't use inverse logic in **write()**
 
+![](images/image2.jpg)
+
+![](images/image1.jpg)
+
 
 ## Connections
 
-![](images/Diagrama_bb.png)
+![](images/Diagrama_bb.jpg)
 
 
 ## Arduino IDE simple code for NodeMCU
