@@ -1,11 +1,25 @@
 # Scribbler2-ESP8266-WiFi
 Trying to add Wifi and GPIO to the Scribbler2 robot using and ESP8266 (NodeMCU)
 
+# WiFi - Access Point
 * RS232 connections from [S2 Hardware Schematic](https://www.parallax.com/downloads/s2-hardware-schematic) (Back PCB)
-* Tested with [Calico](https://bitbucket.org/ipre/calico) and [Scribbler2-Python](https://github.com/titos-carrasco/Scribbler2-Python)
 * NodeMCU programming using **Arduino IDE**
 * Simple code using **SoftwareSerial**
 * SoftwareSerial need to be modified. It doesn't use inverse logic in **write()**
+* Bridge WiFi<->Serial with **socat**: `$ socat -d -d pty,raw,echo=0 tcp4:192.168.145.1:1500`
+* Tested with [Scribbler2-Python](https://github.com/titos-carrasco/Scribbler2-Python)
+* [Calico](https://bitbucket.org/ipre/calico) shows error on port **/dev/pts/XX** created by **socat**  
+
+![](images/image3.jpg)
+
+
+## Connections
+
+![](images/Diagrama_2.jpg)
+
+
+# Passthrough only
+* Tested with [Calico](https://bitbucket.org/ipre/calico) and [Scribbler2-Python](https://github.com/titos-carrasco/Scribbler2-Python)
 
 ![](images/image2.jpg)
 
@@ -14,7 +28,7 @@ Trying to add Wifi and GPIO to the Scribbler2 robot using and ESP8266 (NodeMCU)
 
 ## Connections
 
-![](images/Diagrama_bb.jpg)
+![](images/Diagrama_1.jpg)
 
 
 ## Arduino IDE simple code for NodeMCU
